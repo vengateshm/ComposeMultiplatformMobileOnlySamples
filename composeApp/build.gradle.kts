@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.swiftklib)
 }
 
 kotlin {
@@ -25,6 +26,13 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+        }
+        iosTarget.compilations {
+            val main by getting {
+                cinterops {
+                    create("sms")
+                }
+            }
         }
     }
     
@@ -87,3 +95,9 @@ android {
     }
 }
 
+swiftklib {
+    create("sms") {
+        path = file("../iosApp/iosApp/sms")
+        packageName("dev.vengateshm.compose.multiplatform.mobile.samples.sms")
+    }
+}

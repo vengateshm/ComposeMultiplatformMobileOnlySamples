@@ -1,4 +1,4 @@
-package dev.vengateshm.compose.multiplatform.mobile.samples
+package dev.vengateshm.compose.multiplatform.mobile.samples.permissions
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
