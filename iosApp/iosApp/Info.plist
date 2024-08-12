@@ -41,6 +41,10 @@
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>We need your microphone permission so that others can hear you in the call. </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location is used to track the user and retrieve coordinates in real time.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is used to track the user and retrieve coordinates in real time.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

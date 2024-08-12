@@ -54,6 +54,25 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             api(libs.moko.permissions)
             api(libs.moko.permissions.compose)
+
+            // Geocoding
+            implementation(libs.compass.geocoder)
+
+            // To use geocoding you need to use one or more of the following
+
+            // Optional - Geocoder support for only iOS and Android
+            implementation(libs.compass.geocoder.mobile)
+            // Geolocation
+            implementation(libs.compass.geolocation)
+            // To use geolocation you need to use one or more of the following
+            // Optional - Geolocation support for only iOS and Android
+            implementation(libs.compass.geolocation.mobile)
+            // Autocomplete
+            implementation(libs.compass.autocomplete)
+            // Optional - Autocomplete support for only iOS and Android using native Geocoder
+            implementation(libs.compass.autocomplete.mobile)
+            // Optional - Location permissions for mobile
+            implementation(libs.compass.permissions.mobile)
         }
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSample
+import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocationApp
 import dev.vengateshm.compose.multiplatform.mobile.samples.permissions.PermissionsApp
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +13,8 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             //PermissionsApp()
-            CinteropSample()
+            //CinteropSample()
+            CurrentLocationApp()
         }
     }
 }
