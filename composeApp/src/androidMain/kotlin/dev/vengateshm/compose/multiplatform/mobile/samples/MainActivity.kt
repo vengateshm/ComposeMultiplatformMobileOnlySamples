@@ -7,6 +7,7 @@ import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSamp
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocationApp
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.LocationTracking
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.PlacesAutoComplete
+import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.AppAlertDialogSample
 import dev.vengateshm.compose.multiplatform.mobile.samples.permissions.PermissionsApp
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,8 @@ class MainActivity : ComponentActivity() {
             //CinteropSample()
             //CurrentLocationApp()
             //LocationTracking()
-            PlacesAutoComplete()
+            //PlacesAutoComplete()
+            AppAlertDialogSample()
         }
     }
 }
