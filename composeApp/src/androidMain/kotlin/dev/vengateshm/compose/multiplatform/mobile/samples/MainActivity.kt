@@ -3,17 +3,25 @@ package dev.vengateshm.compose.multiplatform.mobile.samples
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSample
-import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocationApp
-import dev.vengateshm.compose.multiplatform.mobile.samples.location.LocationTracking
-import dev.vengateshm.compose.multiplatform.mobile.samples.location.PlacesAutoComplete
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
 import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.AppAlertDialogSample
-import dev.vengateshm.compose.multiplatform.mobile.samples.permissions.PermissionsApp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        var isChecking = true
+        lifecycleScope.launch {
+            delay(3000L)
+            isChecking = false
+        }
+        installSplashScreen().apply {
+            setKeepOnScreenCondition {
+                isChecking
+            }
+        }
         setContent {
             //PermissionsApp()
             //CinteropSample()
