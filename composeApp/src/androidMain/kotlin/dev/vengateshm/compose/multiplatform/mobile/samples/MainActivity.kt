@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.AppAlertDialogSample
+import dev.vengateshm.compose.multiplatform.mobile.samples.horizontal_pager.CharacterApp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -28,7 +28,8 @@ class MainActivity : ComponentActivity() {
             //CurrentLocationApp()
             //LocationTracking()
             //PlacesAutoComplete()
-            AppAlertDialogSample()
+            //AppAlertDialogSample()
+            CharacterApp()
         }
     }
 }
