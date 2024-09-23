@@ -42,6 +42,7 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.core.splashscreen)
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -74,6 +75,10 @@ kotlin {
             implementation(libs.compass.autocomplete.mobile)
             // Optional - Location permissions for mobile
             implementation(libs.compass.permissions.mobile)
+
+            // Koin
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
         }
     }
 }
