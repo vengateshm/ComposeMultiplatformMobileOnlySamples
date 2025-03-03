@@ -1,5 +1,6 @@
 package dev.vengateshm.compose.multiplatform.mobile.samples
 
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.window.ComposeUIViewController
 import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSample
 import dev.vengateshm.compose.multiplatform.mobile.samples.di.initializeKoin
@@ -8,9 +9,14 @@ import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocat
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.LocationTracking
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.PlacesAutoComplete
 import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.AppAlertDialogSample
+import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.LocalNativeViewFactory
+import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.NativeButtonSample
+import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.NativeViewFactory
 import dev.vengateshm.compose.multiplatform.mobile.samples.permissions.PermissionsApp
 
-fun MainViewController() = ComposeUIViewController(
+fun MainViewController(
+    nativeViewFactory: NativeViewFactory
+) = ComposeUIViewController(
     configure = {
         initializeKoin()
     }
@@ -21,5 +27,8 @@ fun MainViewController() = ComposeUIViewController(
     //LocationTracking()
     //PlacesAutoComplete()
     //AppAlertDialogSample()
-    CharacterApp()
+    //CharacterApp()
+    CompositionLocalProvider(LocalNativeViewFactory provides nativeViewFactory) {
+        NativeButtonSample()
+    }
 }
