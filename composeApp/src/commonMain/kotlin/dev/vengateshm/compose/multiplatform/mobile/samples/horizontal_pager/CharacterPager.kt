@@ -20,8 +20,9 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Text
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -31,6 +32,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.vengateshm.compose.multiplatform.mobile.samples.color_picker.colorList
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -104,7 +106,7 @@ fun CharacterCard(
     ) {
         Card(
             modifier = Modifier.padding(end = 40.dp).fillMaxSize(),
-            backgroundColor = character.bgColor,
+            colors = CardDefaults.cardColors(containerColor = character.bgColor),
             shape = RoundedCornerShape(16.dp)
         ) {
             Column(

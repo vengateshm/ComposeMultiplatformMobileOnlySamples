@@ -7,12 +7,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.ExposedDropdownMenuBox
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
@@ -30,7 +30,7 @@ import dev.jordond.compass.autocomplete.Autocomplete
 import dev.jordond.compass.autocomplete.mobile
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlacesAutoComplete(modifier: Modifier = Modifier) {
     MaterialTheme {
@@ -82,13 +82,14 @@ fun PlacesAutoComplete(modifier: Modifier = Modifier) {
                     if (places.isNotEmpty()) {
                         places.forEach { selectionOption ->
                             DropdownMenuItem(
+                                text = {
+                                    Text(text = selectionOption?.locality ?: "Unknown place")
+                                },
                                 onClick = {
                                     selectedPlace = selectionOption
                                     expanded = false
                                 }
-                            ) {
-                                Text(text = selectionOption?.locality ?: "Unknown place")
-                            }
+                            )
                         }
                     }
                 }
