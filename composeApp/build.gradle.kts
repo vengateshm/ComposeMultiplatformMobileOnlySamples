@@ -58,6 +58,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             api(libs.moko.permissions)
             api(libs.moko.permissions.compose)
+            api(libs.moko.permissions.microphone)
 
             // Geocoding
             implementation(libs.compass.geocoder)

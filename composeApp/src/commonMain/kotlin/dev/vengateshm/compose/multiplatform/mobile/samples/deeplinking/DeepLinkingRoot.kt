@@ -22,6 +22,8 @@ import androidx.navigation.toRoute
 fun DeepLinkingRoot() {
     val navController = rememberNavController()
 
+    DeepLinkListener(navController)
+
     NavHost(
         navController = navController,
         startDestination = Route.List

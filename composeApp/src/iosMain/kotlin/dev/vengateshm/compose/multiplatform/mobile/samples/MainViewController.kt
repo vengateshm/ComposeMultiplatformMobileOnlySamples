@@ -3,6 +3,7 @@ package dev.vengateshm.compose.multiplatform.mobile.samples
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.window.ComposeUIViewController
 import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSample
+import dev.vengateshm.compose.multiplatform.mobile.samples.deeplinking.DeepLinkingRoot
 import dev.vengateshm.compose.multiplatform.mobile.samples.di.initializeKoin
 import dev.vengateshm.compose.multiplatform.mobile.samples.horizontal_pager.CharacterApp
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocationApp
@@ -21,14 +22,15 @@ fun MainViewController(
         initializeKoin()
     }
 ) {
-    //PermissionsApp()
-    //CinteropSample()
-    //CurrentLocationApp()
-    //LocationTracking()
-    //PlacesAutoComplete()
-    //AppAlertDialogSample()
-    //CharacterApp()
-    CompositionLocalProvider(LocalNativeViewFactory provides nativeViewFactory) {
-        NativeButtonSample()
-    }
+//    PermissionsApp()
+//    CinteropSample()
+//    CurrentLocationApp()
+//    LocationTracking()
+//    PlacesAutoComplete()
+//    AppAlertDialogSample()
+//    CharacterApp()
+//    CompositionLocalProvider(LocalNativeViewFactory provides nativeViewFactory) {
+//        NativeButtonSample()
+//    }
+    DeepLinkingRoot()
 }

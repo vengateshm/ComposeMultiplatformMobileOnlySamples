@@ -26,7 +26,7 @@ fun CurrentLocationApp(modifier: Modifier = Modifier) {
                 is GeolocatorResult.Error -> when (result) {
                     is GeolocatorResult.NotFound -> println("LOCATION SUCCESS: ${result.message}")
                     is GeolocatorResult.NotSupported -> println("LOCATION SUCCESS: ${result.message}")
-                    is GeolocatorResult.PermissionError -> println("LOCATION SUCCESS: ${result.message}")
+                    is GeolocatorResult.PermissionDenied -> println("LOCATION SUCCESS: ${result.message}")
                     is GeolocatorResult.GeolocationFailed -> println("LOCATION SUCCESS: ${result.message}")
                     else -> println("LOCATION SUCCESS: ${result.message}")
                 }
