@@ -6,6 +6,7 @@ import dev.vengateshm.compose.multiplatform.mobile.samples.cinterop.CinteropSamp
 import dev.vengateshm.compose.multiplatform.mobile.samples.deeplinking.DeepLinkingRoot
 import dev.vengateshm.compose.multiplatform.mobile.samples.di.initializeKoin
 import dev.vengateshm.compose.multiplatform.mobile.samples.horizontal_pager.CharacterApp
+import dev.vengateshm.compose.multiplatform.mobile.samples.koin_annotations.presentation.ToDoScreen
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.CurrentLocationApp
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.LocationTracking
 import dev.vengateshm.compose.multiplatform.mobile.samples.location.PlacesAutoComplete
@@ -19,7 +20,7 @@ fun MainViewController(
     nativeViewFactory: NativeViewFactory
 ) = ComposeUIViewController(
     configure = {
-        initializeKoin()
+        //initializeKoin()
     }
 ) {
 //    PermissionsApp()
@@ -32,5 +33,6 @@ fun MainViewController(
 //    CompositionLocalProvider(LocalNativeViewFactory provides nativeViewFactory) {
 //        NativeButtonSample()
 //    }
-    DeepLinkingRoot()
+//    DeepLinkingRoot()
+    ToDoScreen()
 }

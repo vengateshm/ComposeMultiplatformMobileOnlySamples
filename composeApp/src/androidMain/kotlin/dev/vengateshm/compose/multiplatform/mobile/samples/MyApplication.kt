@@ -3,13 +3,17 @@ package dev.vengateshm.compose.multiplatform.mobile.samples
 import android.app.Application
 import android.content.Context
 import dev.vengateshm.compose.multiplatform.mobile.samples.di.initializeKoin
+import dev.vengateshm.compose.multiplatform.mobile.samples.koin_annotations.di.initKoin
 import org.koin.android.ext.koin.androidContext
 
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         appContext = this
-        initializeKoin {
+//        initializeKoin {
+//            androidContext(this@MyApplication)
+//        }
+        initKoin {
             androidContext(this@MyApplication)
         }
     }
