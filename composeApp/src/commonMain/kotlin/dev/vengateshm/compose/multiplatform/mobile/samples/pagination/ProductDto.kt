@@ -1,0 +1,16 @@
+package dev.vengateshm.compose.multiplatform.mobile.samples.pagination
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class ProductDto(
+    val id: Long,
+    val title: String,
+    val price: Double
+)
+
+@Serializable
+data class ProductResponseDto(
+    val products: List<ProductDto>,
+    val total: Long
+)

@@ -14,6 +14,7 @@ import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.AppAler
 import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.LocalNativeViewFactory
 import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.NativeButtonSample
 import dev.vengateshm.compose.multiplatform.mobile.samples.native_ios_ui.NativeViewFactory
+import dev.vengateshm.compose.multiplatform.mobile.samples.pagination.PaginationRoot
 import dev.vengateshm.compose.multiplatform.mobile.samples.permissions.PermissionsApp
 
 fun MainViewController(
@@ -34,5 +35,6 @@ fun MainViewController(
 //        NativeButtonSample()
 //    }
 //    DeepLinkingRoot()
-    ToDoScreen()
+//    ToDoScreen()
+    PaginationRoot()
 }
